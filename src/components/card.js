@@ -14,7 +14,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Logo from './../Ressources/Image/img-1.jpg';
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -49,7 +49,7 @@ export default function RecipeReviewCard(props) {
         title = {props.title}
         
       />
-      <CardMedia component={props.img} height="194" image={Logo} alt={props.title} />
+      <CardMedia component='img' height="194" image={props.img} alt={props.title} />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {props.description}
