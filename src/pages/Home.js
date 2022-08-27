@@ -1,6 +1,6 @@
 import Grid from '@mui/material/Grid';
-import '../Ressources/Image/img-1.jpg';
-import '../Ressources/Image/img2.webp';
+// import img1 from '../Ressources/Image/img-1.jpg';
+// import img2 from '../Ressources/Image/img2.webp';
 
 import RecipeReviewCard from '../components/card';
 const MyCard = RecipeReviewCard;
@@ -15,7 +15,7 @@ export default function Home() {
           <MyCard
             avatar="P"
             title=" Producteur"
-            img="img-1.jpg"
+            // img={img1}
             description="En choisissant de vous logger en tant que producteur vous aurez accés
             aux boucher de votre régions."
             description2="Ici vous pourrez mettre en vente vos bêtes au prix que vous voulez pour que les boucher vois vos bêtes avec les critère demandé. "
@@ -25,7 +25,7 @@ export default function Home() {
           <MyCard
             avatar="B"
             title=" boucher"
-            img="img2.jpg"
+            // img = {img2}
             description="En choisissant de vous logger en tant que boucher vous aurez accés
             aux producteur de votre régions."
             description2="Ici vous pourrez voir vos éleveurs et leurs bêtes au prix qu'ils auront décidé de les vendre et choisir vos critère"
