@@ -75,12 +75,9 @@ export default function RecipeReviewCard(props) {
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
-            En choisissant de vous logger en tant quéeleveur vous aurez accés
-            aux boucher de votre régions.
           </Typography>
           <Typography paragraph>
-            Ici vous pourrez mettre en vente vos bêtes au prix que vous voulez
-            pour que les boucher vois vos bêtes avec les critère demandé
+            {props.description2}
           </Typography>
         </CardContent>
       </Collapse>
