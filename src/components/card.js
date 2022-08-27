@@ -38,7 +38,7 @@ export default function RecipeReviewCard(props) {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            {props.avatar}
           </Avatar>
         }
         action={
@@ -46,8 +46,8 @@ export default function RecipeReviewCard(props) {
             <MoreVertIcon />
           </IconButton>
         }
-        title="éleveur"
-        subheader="01/01/2001"
+        title = {props.title}
+        
       />
       <CardMedia component="img" height="194" image={Logo} alt="éleveur" />
       <CardContent>
@@ -74,11 +74,8 @@ export default function RecipeReviewCard(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-          </Typography>
-          <Typography paragraph>
-            {props.description2}
-          </Typography>
+          <Typography paragraph>{props.description2}</Typography>
+          <Typography paragraph></Typography>
         </CardContent>
       </Collapse>
     </Card>
