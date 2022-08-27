@@ -1,4 +1,4 @@
-import './App.css';
+import './style/App.css';
 import Navbar from './navbar';
 import Connection from './pages/connection';
 import Propos from './pages/propos';

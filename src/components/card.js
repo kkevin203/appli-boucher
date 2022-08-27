@@ -38,7 +38,7 @@ export default function RecipeReviewCard(props) {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            {props.avatar}
           </Avatar>
         }
         action={
@@ -46,8 +46,8 @@ export default function RecipeReviewCard(props) {
             <MoreVertIcon />
           </IconButton>
         }
-        title="éleveur"
-        subheader="01/01/2001"
+        title = {props.title}
+        
       />
       <CardMedia component="img" height="194" image={Logo} alt="éleveur" />
       <CardContent>
@@ -74,14 +74,8 @@ export default function RecipeReviewCard(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            En choisissant de vous logger en tant quéeleveur vous aurez accés
-            aux boucher de votre régions.
-          </Typography>
-          <Typography paragraph>
-            Ici vous pourrez mettre en vente vos bêtes au prix que vous voulez
-            pour que les boucher vois vos bêtes avec les critère demandé
-          </Typography>
+          <Typography paragraph>{props.description2}</Typography>
+          <Typography paragraph></Typography>
         </CardContent>
       </Collapse>
     </Card>
