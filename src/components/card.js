@@ -49,7 +49,7 @@ export default function RecipeReviewCard(props) {
         title = {props.title}
         
       />
-      <CardMedia component="img" height="194" image={Logo} alt="éleveur" />
+      <CardMedia component={props.img} height="194" image={Logo} alt={props.title} />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {props.description}
