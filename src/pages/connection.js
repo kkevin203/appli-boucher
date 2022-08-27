@@ -42,13 +42,13 @@ const theme = createTheme({
   },
 });
 
-export default function Connection() {
+export default function Connection(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
-      password: data.get('password'),
+      password: data.get('password'),      
     });
   };
 
@@ -64,8 +64,8 @@ export default function Connection() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+          <Avatar sx={{ m: 1, bgcolor: 'red' }}>
+            <LockOutlinedIcon/>
           </Avatar>
           <Typography component="h1" variant="h5" style={{color:"red"}}>
             Connection
