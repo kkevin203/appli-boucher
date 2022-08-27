@@ -27,7 +27,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard(props) {
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -52,8 +52,7 @@ export default function RecipeReviewCard() {
       <CardMedia component="img" height="194" image={Logo} alt="éleveur" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Nous vous mettons en contact avec les bouchers de votre régions pour
-          un circuit extra cours .
+          {props.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
