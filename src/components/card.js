@@ -14,6 +14,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
+
 
 
 const ExpandMore = styled((props) => {
@@ -56,12 +59,12 @@ export default function RecipeReviewCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+        <Button  href={props.lien} component={Link}>
+              {'Pas encore inscrit? Crée ton compte'}
+        </Button> 
+      
+        
+        
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
@@ -73,7 +76,7 @@ export default function RecipeReviewCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>Petit plus:</Typography>
           <Typography paragraph>{props.description2}</Typography>
           <Typography paragraph></Typography>
         </CardContent>

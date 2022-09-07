@@ -34,7 +34,7 @@ function CustomLinkWithMenuItem({ to, children, ...props }) {
     <li className={isActive ? 'active' : ''}>
       <Link to={to} {...props} onClick={handleClick}>
         {children}
-      </Link>   
+      </Link>
       <Menu
         id="fade-menu"
         MenuListProps={{
@@ -45,8 +45,19 @@ function CustomLinkWithMenuItem({ to, children, ...props }) {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose}>{props.firstMenu}</MenuItem>
-        <MenuItem onClick={handleClose}>{props.secondMenu}</MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component={Link}
+          // le prop 'to' (et tout autre prop non reconnu par MenuItem lui-même)
+          // sera transmis au composant Link
+          to="/connection"
+        >
+          {' '}
+          {props.firstMenu}
+        </MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/connection">
+          {props.secondMenu}
+        </MenuItem>
         <MenuItem onClick={handleClose}>{props.thirdMenu}</MenuItem>
       </Menu>
     </li>

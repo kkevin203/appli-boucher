@@ -3,7 +3,8 @@ import Navbar from './navbar';
 import Connection from './pages/connection';
 import Propos from './pages/propos';
 import Home from './pages/Home';
-import Inscription_producteur from './components/inscription-producteur';
+import Inscription_producteur from './pages/inscription-producteur';
+import Inscription_boucher from './pages/inscription-boucher';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
           <Route
             path="/inscription-producteur"
             element={<Inscription_producteur />}
+          />
+          <Route
+            path="/inscription-boucher"
+            element={<Inscription_boucher />}
           />
         </Routes>
       </div>

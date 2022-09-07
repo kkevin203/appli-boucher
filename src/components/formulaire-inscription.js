@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Formulaire() {
+function Formulaire(props) {
   const [name, setName] = useState('');
   const [nameCompany, setNameCompany] = useState('');
   const [tva, setTva] = useState('');
@@ -34,7 +34,7 @@ function Formulaire() {
   // entrer par l'utilisateur dans le formulaire
   const handleNumeroChange = (e) => {
     setNumero(e.target.value);
-  }
+  };
 
   // fonction pour mettre à jour l'état de l'e-mail avec la valeur
   // entrer par l'utilisateur dans le formulaire
@@ -83,8 +83,8 @@ function Formulaire() {
         >
           {/*lorsque l'utilisateur soumet le formulaire, handleSubmit()
         la fonction sera appelée .*/}
-          <h2>formulaire Producteur </h2>
-          <h3> Sign-up Form </h3>
+          <h2> formulaire {props.title} </h2>
+          <h3> inscrivez vous ! </h3>
           <img src="" />
           <label>Name:</label>
           <br />

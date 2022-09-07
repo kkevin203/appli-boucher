@@ -19,16 +19,18 @@ export default function Home() {
             description="En choisissant de vous logger en tant que producteur vous aurez accés
             aux boucher de votre régions."
             description2="Ici vous pourrez mettre en vente vos bêtes au prix que vous voulez pour que les boucher vois vos bêtes avec les critère demandé. "
+            lien="./inscription-producteur"
           />
         </Grid>
         <Grid item xs={3}>
           <MyCard
             avatar="B"
             title=" boucher"
-            img = "static/media/img2.755030a1a7f5a82ce826.webp"
+            img="static/media/img2.755030a1a7f5a82ce826.webp"
             description="En choisissant de vous logger en tant que boucher vous aurez accés
             aux producteur de votre régions."
             description2="Ici vous pourrez voir vos éleveurs et leurs bêtes au prix qu'ils auront décidé de les vendre et choisir vos critère"
+            lien="./inscription-boucher"
           />
         </Grid>
       </Grid>
