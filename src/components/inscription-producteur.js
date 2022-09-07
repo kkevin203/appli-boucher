@@ -117,6 +117,8 @@ function Formulaire() {
           <br />
           <input
             type="text"
+            maxlength="11"
+            pattern="[0-9]{11}"
             value={tva}
             required
             onChange={(e) => {
@@ -140,7 +142,9 @@ function Formulaire() {
           <label>Numéro de téléphone:</label>
           <br />
           <input
-            type="tel"
+            type="text"
+            maxlength="10"
+            pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
             value={numero}
             required
             onChange={(e) => {
