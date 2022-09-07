@@ -65,8 +65,8 @@ function Formulaire() {
       alert(
         'Un formulaire a été soumis avec Nom:"' +
           name +
-          '" ,Age :"' +
-          tva +
+          '" ,Raison social :"' +
+          nameCompany +
           '" et Email :"' +
           email +
           '"'
@@ -144,7 +144,7 @@ function Formulaire() {
           <input
             type="text"
             maxlength="10"
-            pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
+            pattern="[0-9]{10}"
             value={numero}
             required
             onChange={(e) => {
