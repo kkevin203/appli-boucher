@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Grid';
-import img1 from '../Ressources/Image/img-1.jpg';
-import img2 from '../Ressources/Image/img2.webp';
+
 
 import RecipeReviewCard from '../components/card';
 const MyCard = RecipeReviewCard;

@@ -91,6 +91,7 @@ function Formulaire(props) {
           <input
             type="text"
             value={name}
+            placeholder="Nom et prénom"
             required
             onChange={(e) => {
               handleChange(e);
@@ -104,6 +105,7 @@ function Formulaire(props) {
           <input
             type="text"
             value={nameCompany}
+            placeholder="Raison social"
             required
             onChange={(e) => {
               handleNameCompanyChange(e);
@@ -118,6 +120,7 @@ function Formulaire(props) {
             type="text"
             maxlength="11"
             pattern="[0-9]{11}"
+            placeholder="00000000000"
             value={tva}
             required
             onChange={(e) => {
@@ -132,6 +135,7 @@ function Formulaire(props) {
           <input
             type="text"
             value={adresse}
+            placeholder="1 rue des champs 01010 blabla"
             required
             onChange={(e) => {
               handleAdresseChange(e);
@@ -144,6 +148,7 @@ function Formulaire(props) {
             type="text"
             maxlength="10"
             pattern="[0-9]{10}"
+            placeholder="01 01 01 01 01"
             value={numero}
             required
             onChange={(e) => {
@@ -158,6 +163,7 @@ function Formulaire(props) {
           <input
             type="email"
             value={email}
+            placeholder="exemple@test.fr"
             required
             onChange={(e) => {
               handleEmailChange(e);
@@ -171,6 +177,7 @@ function Formulaire(props) {
           <input
             type="password"
             value={password}
+            placeholder="password"
             required
             onChange={(e) => {
               handlePasswordChange(e);
@@ -184,6 +191,7 @@ function Formulaire(props) {
           <input
             type="password"
             value={confPassword}
+            placeholder="password"
             required
             onChange={(e) => {
               handleConfPasswordChange(e);

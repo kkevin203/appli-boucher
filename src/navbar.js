@@ -3,6 +3,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import Fade from '@mui/material/Fade';
+import Logo_panier from './components/Logo-panier';
 
 export default function Navbar() {
   return (
@@ -10,9 +11,16 @@ export default function Navbar() {
       <Link to="/" className="site-title">
         Producteur-Boucher
       </Link>
-      <ul>        
-        
-        <CustomLinkWithMenuItem to="connection" firstMenu="Boucher" secondMenu="Producteur" thirdMenu="Déconnection">connection</CustomLinkWithMenuItem>
+      <ul>
+        <Logo_panier />
+        <CustomLinkWithMenuItem
+          to="connection"
+          firstMenu="Boucher"
+          secondMenu="Producteur"
+          thirdMenu="Déconnection"
+        >
+          connection
+        </CustomLinkWithMenuItem>
         <CustomLink to="propos">A propos</CustomLink>
       </ul>
     </nav>
@@ -66,12 +74,12 @@ function CustomLinkWithMenuItem({ to, children, ...props }) {
 
 function CustomLink({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true }); 
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
   return (
     <li className={isActive ? 'active' : ''}>
       <Link to={to} {...props}>
         {children}
-      </Link>       
+      </Link>
     </li>
   );
 }
