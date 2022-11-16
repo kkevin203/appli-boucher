@@ -4,6 +4,8 @@
 form {
   border:2px solid green;
   padding: 30px;
+  align-items: center;
+  margin: 0 auto;
 }
 /* img{
   height: 120px;
@@ -22,4 +24,7 @@ form {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+}
+#boucher {
+  width: 30%;
 }

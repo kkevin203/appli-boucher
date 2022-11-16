@@ -1,11 +1,13 @@
 import Grid from '@mui/material/Grid';
 import img1 from '../Ressources/Image/img-1.jpg';
 import img2 from '../Ressources/Image/img2.webp';
+import boeuf1 from '../Ressources/Image/le-boeuf-1.jpg';
+import Button_Inscription from '../components/bouton-inscription';
 
 import RecipeReviewCard from '../components/card';
 const MyCard = RecipeReviewCard;
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <h1>Home</h1>
@@ -19,8 +21,10 @@ export default function Home() {
             description="En choisissant de vous logger en tant que producteur vous aurez accés
             aux boucher de votre régions."
             description2="Ici vous pourrez mettre en vente vos bêtes au prix que vous voulez pour que les boucher vois vos bêtes avec les critère demandé. "
+            Button="Pas encore inscrit? Crée ton compte"
             lien="./inscription-producteur"
           />
+          <Button_Inscription lien="./inscription-producteur" />
         </Grid>
         <Grid item xs={3}>
           <MyCard
@@ -31,7 +35,9 @@ export default function Home() {
             aux producteur de votre régions."
             description2="Ici vous pourrez voir vos éleveurs et leurs bêtes au prix qu'ils auront décidé de les vendre et choisir vos critère"
             lien="./inscription-boucher"
+            Button="Pas encore inscrit? Crée ton compte"
           />
+          <Button_Inscription lien="./inscription-boucher" />
         </Grid>
       </Grid>
     </>

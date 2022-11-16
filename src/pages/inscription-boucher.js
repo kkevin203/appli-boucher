@@ -6,7 +6,7 @@ export default function inscription() {
   return (
     <>
       <h1>inscription </h1>
-      <Form title=" Boucher" />
+      <Form title=" Boucher" styled=" width: 30%;" />
     </>
   );
 }

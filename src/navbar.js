@@ -5,6 +5,7 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import Fade from '@mui/material/Fade';
 import Logo_panier from './components/Logo-panier';
 
+
 export default function Navbar() {
   return (
     <nav className="nav">
