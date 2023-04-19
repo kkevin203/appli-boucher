@@ -15,8 +15,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const SiteName = 'Producteur-Boucher';
 const domaineName = 'http://localhost:3000/';
-const SiteName = 'Producteur-Boucher';
-const domaineName = 'http://localhost:3000/';
 
 function Copyright(props) {
   return (
