@@ -47,10 +47,14 @@ export default function RecipeReviewCard(props) {
             <MoreVertIcon />
           </IconButton>
         }
-        title = {props.title}
-        
+        title={props.title}
       />
-      <CardMedia component="img" height="194" image={Logo} alt="éleveur" />
+      <CardMedia
+        component="img"
+        height="194"
+        image={props.img}
+        alt={props.title}
+      />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {props.description}
