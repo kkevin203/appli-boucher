@@ -41,11 +41,7 @@ export default function RecipeReviewCard(props) {
             {props.avatar}
           </Avatar>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        
         title = {props.title}
         
       />

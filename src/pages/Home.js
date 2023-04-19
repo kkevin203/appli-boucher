@@ -6,7 +6,7 @@ const MyCard = RecipeReviewCard;
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+    <br/>
       <Grid container spacing={0}>
         <Grid item xs={3}></Grid>
         <Grid item xs={3}>

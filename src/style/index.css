@@ -7,7 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .container {
-  background-color: grey;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
