@@ -13,15 +13,20 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
- const SiteName = "Producteur-Boucher"
-const domaineName = "http://localhost:3000/"
+const SiteName = 'Producteur-Boucher';
+const domaineName = 'http://localhost:3000/';
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
       {'Copyright © '}
       <Link color="inherit" href={domaineName}>
-      {SiteName}
+        {SiteName}
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -42,7 +47,7 @@ const theme = createTheme({
   },
 });
 
-export default function Connection() {
+export default function Connection(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -64,13 +69,18 @@ export default function Connection() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'red' }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5" style={{color:"red"}}>
+          <Typography component="h1" variant="h5" style={{ color: 'red' }}>
             Connection
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
             <TextField
               margin="normal"
               required
@@ -91,25 +101,37 @@ export default function Connection() {
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel            
+            <FormControlLabel
               control={<Checkbox value="remember" color="red" />}
               label="Se souvenir de moi"
             />
-            <Button  
-              color = "red"
-              type="submit"               
+            <Button
+              color="red"
+              type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              CONNECTION
+              CONNEXION
             </Button>
-              <Button color='red' href="/" component={Link}>
-              {"Mot de passe oublié ?"}
-              </Button>
-              <Button color='red' href="/" component={Link}>
-              {"Pas encore inscrit? Crée ton compte"}
-              </Button>              
+            <Button color="red" href="/" component={Link}>
+              {'Mot de passe oublié ?'}
+            </Button>
+            <Button color="red" href="/" component={Link}>
+              {'Pas encore inscrit? Crée ton compte'}
+            </Button>
+            <Button color="green" href="/inscription-producteur" component={Link}>
+              {'producteur ?'}
+            </Button>
+            <Button color="green" href="/inscription-boucher" component={Link}>
+              {'Boucher ?'}
+            </Button>
+            <Button color="red" href="/" component={Link}>
+              {'Mot de passe oublié ?'}
+            </Button>
+            <Button color="red" href="/" component={Link}>
+              {'Pas encore inscrit? Crée ton compte'}
+            </Button>
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
