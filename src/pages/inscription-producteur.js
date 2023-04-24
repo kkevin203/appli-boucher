@@ -1,4 +1,5 @@
 import Formulaire from '../components/formulaire-inscription';
+import React from 'react'
 
 const Form = Formulaire;
 
