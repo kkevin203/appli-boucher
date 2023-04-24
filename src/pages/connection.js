@@ -74,7 +74,7 @@ export default function Connection(props) {
           <Avatar sx={{ m: 1, bgcolor: 'red' }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5" style={{ color: 'red' }}>
+          <Typography component="h1" variant="h5" style={{color:"red"}}>
             Connection
           </Typography>
           <Box
@@ -116,12 +116,12 @@ export default function Connection(props) {
             >
               CONNECTION
             </Button>
-            <Button color="red" href="/" component={Link}>
-              {'Mot de passe oublié ?'}
-            </Button>
-            <Button color="red" href="/" component={Link}>
-              {'Pas encore inscrit? Crée ton compte'}
-            </Button>
+              <Button color='red' href="/" component={Link}>
+              {"Mot de passe oublié ?"}
+              </Button>
+              <Button color='red' href="/" component={Link}>
+              {"Pas encore inscrit? Crée ton compte"}
+              </Button>              
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />

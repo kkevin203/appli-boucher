@@ -10,11 +10,12 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
+import Propos from '../pages/propos';
+import Button_Inscription from '../components/bouton-inscription';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -46,22 +47,22 @@ export default function RecipeReviewCard(props) {
             <MoreVertIcon />
           </IconButton>
         }
-        title = {props.title}
-        
+        title={props.title}
       />
-      <CardMedia component='img' height="194" image={props.img} alt={props.title} />
+      <CardMedia
+        component="img"
+        height="194"
+        image={props.img}
+        alt={props.title}
+      />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {props.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+        <Button_Inscription lien={props.lien} />
+
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
@@ -73,7 +74,7 @@ export default function RecipeReviewCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>Petit plus:</Typography>
           <Typography paragraph>{props.description2}</Typography>
           <Typography paragraph></Typography>
         </CardContent>
@@ -81,4 +82,3 @@ export default function RecipeReviewCard(props) {
     </Card>
   );
 }
-
