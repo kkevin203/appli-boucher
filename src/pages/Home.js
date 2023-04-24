@@ -8,9 +8,9 @@ import React from 'react'
 import RecipeReviewCard from '../components/card';
 const MyCard = RecipeReviewCard;
 
-export default function Home(props) {
+export default function Home() {
   return (
-    <React.Fragment>
+    <>
       <h1>Home</h1>
       <Grid container spacing={0}>
         <Grid item xs={3}></Grid>
@@ -41,6 +41,6 @@ export default function Home(props) {
           <Button_Inscription lien="./inscription-boucher" />
         </Grid>
       </Grid>
-    </React.Fragment>
+    </>
   );
 }
