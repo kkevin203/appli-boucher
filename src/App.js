@@ -7,6 +7,7 @@ import Boutique from './pages/boutique';
 import Inscription_producteur from './pages/inscription-producteur';
 import Inscription_boucher from './pages/inscription-boucher';
 import { Route, Routes } from 'react-router-dom';
+import React from 'react'
 
 function App() {
   return (
