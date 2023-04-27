@@ -30,6 +30,8 @@ module.exports.signin = async (req, res) => {
       name: i_user.name,
       email: i_user.email,
       id: i_user._id,
+      adress: i_user.adress,
+      tel: i_user.tel,
     };
     const token = jwt.sign(payload, 'PAS SECRET', { expiresIn: '24h' });
 

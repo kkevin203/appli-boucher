@@ -14,7 +14,7 @@ export default function Button_Inscription(props) {
         color="secondary"
         href={props.lien}
         component={Link}
-        Button={props.Button}
+        button={props.button}
       >
         Pas encore inscrit? Crée ton compte
       </Button>

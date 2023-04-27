@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-
+import { useState } from 'react'; 
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
@@ -49,13 +49,29 @@ const theme = createTheme({
 });
 
 export default function Connection(props) {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
+  const [name, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
+    let result = await fetch(
+      'http://localhost:5000/connection', {
+        method: "post",
+        body: JSON.stringify({ name, email }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+      })
+      result = await result.json();
+      console.warn(result);
+      if (result);
+      alert("Data saved succesfully");
+      setEmail("");
+      setPassword("");
   };
 
   return (
@@ -88,6 +104,7 @@ export default function Connection(props) {
               fullWidth
               id="email"
               label="Email Address"
+              onChange={(e) => setEmail(e.target.value)}
               name="email"
               autoComplete="email"
               autoFocus
@@ -99,6 +116,7 @@ export default function Connection(props) {
               name="password"
               label="Password"
               type="password"
+              onChange={(e) => setPassword(e.target.value)}
               id="password"
               autoComplete="current-password"
             />

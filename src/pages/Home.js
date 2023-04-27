@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <h1>Home</h1>
       <Grid container spacing={0}>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={2}></Grid>
         <Grid item xs={3}>
           <MyCard
             avatar="P"
@@ -25,7 +25,17 @@ export default function Home() {
             Button="Pas encore inscrit? Crée ton compte"
             lien="./inscription-producteur"
           />
-          <Button_Inscription lien="./inscription-producteur" />
+        </Grid>
+        <Grid item xs={3}>
+          <MyCard
+            avatar="V"
+            title=" Visiteur"
+            img="https://picsum.photos/200/300?grayscale"
+            description="visitez,explorez en toute liberté. Connectez vous plus tard "
+            description2="Ici vous pourrez mettre en vente vos bêtes en vente ou achetez vos bêtes. "
+            Button="Pas encore inscrit? Crée ton compte"
+            lien="./boutique"
+          />
         </Grid>
         <Grid item xs={3}>
           <MyCard
@@ -38,7 +48,6 @@ export default function Home() {
             lien="./inscription-boucher"
             Button="Pas encore inscrit? Crée ton compte"
           />
-          <Button_Inscription lien="./inscription-boucher" />
         </Grid>
       </Grid>
     </>

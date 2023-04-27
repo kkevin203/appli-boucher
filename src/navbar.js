@@ -12,7 +12,7 @@ export default function Navbar() {
       </Link>
       <ul>        
         
-        <CustomLinkWithMenuItem to="connection" firstMenu="Boucher" secondMenu="Producteur" thirdMenu="Déconnection">connection</CustomLinkWithMenuItem>
+        <CustomLinkWithMenuItem to="connection" firstmenu="Boucher" secondmenu="Producteur" thirdmenu="Déconnection">connection</CustomLinkWithMenuItem>
         <CustomLink to="propos">A propos</CustomLink>
       </ul>
     </nav>
@@ -45,9 +45,9 @@ function CustomLinkWithMenuItem({ to, children, ...props }) {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose}>{props.firstMenu}</MenuItem>
-        <MenuItem onClick={handleClose}>{props.secondMenu}</MenuItem>
-        <MenuItem onClick={handleClose}>{props.thirdMenu}</MenuItem>
+        <MenuItem onClick={handleClose}>{props.firstmenu}</MenuItem>
+        <MenuItem onClick={handleClose}>{props.secondmenu}</MenuItem>
+        <MenuItem onClick={handleClose}>{props.thirdmenu}</MenuItem>
       </Menu>
     </li>
   );
