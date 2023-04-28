@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const mongoClient = require('mongodb').mongoClient;
 
-mongoose.connect('mongodb://localhost:appli-boucher', {
+mongoose.connect('mongodb://localhost:3000', {
     dbName: 'appli-boucher',
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -16,7 +16,7 @@ mongoClient.connect(uri,function(err,client) {
    client.close();
 });
 
-const url='mongodb://localhost:appli-boucher';
+const url='mongodb://localhost:3000';
 
 mongoose.connect(url,{}).then(()=>{
     
@@ -49,14 +49,14 @@ User.createIndexes();
 const express = require('express');
 const app = express();
 const cors = require("cors");
-console.log("App listen at port 5000");
+console.log("App listen at port 3000");
 app.use(express.json());
 app.use(cors());
 app.get("/", (req, resp) => {
  
     resp.send("App is Working");
     // You can check backend is working or not by
-    // entering http://loacalhost:5000
+    // entering http://loacalhost:3000
      
     // If you see App is working means
     // backend working properly
@@ -79,4 +79,4 @@ app.post("/connection", async (req, resp) => {
         resp.send("Something Went Wrong");
     }
 });
-app.listen(5000);
+app.listen(3000);

@@ -59,7 +59,7 @@ export default function Connection(props) {
       password: data.get('password'),
     });
     let result = await fetch(
-      'http://localhost:5000/connection', {
+      'http://localhost:3000/connection', {
         method: "post",
         body: JSON.stringify({ name, email }),
         headers: {
